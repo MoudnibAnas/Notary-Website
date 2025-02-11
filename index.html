@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notaire à Safi - Maître Zouheir Belaksiria</title>
+    <meta name="description" content="Site officiel de Maître Zouheir Belaksiria, notaire à Safi. Découvrez nos services en droit immobilier, contrats et conseil juridique.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <img src="images/logo.png" alt="Notaires du Maroc" class="h-12">
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#services" class="nav-link" data-translate="services">Services</a>
+                <a href="#faq" class="nav-link" data-translate="faq">FAQ</a>
+                <a href="#contact" class="nav-link" data-translate="contact">Contact</a>
+                <!-- Sélecteur de langue -->
+                <select id="language-selector" class="border rounded p-1 bg-white" onchange="changeLanguage(this.value)">
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+            </nav>
+            <!-- Menu Mobile -->
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                ☰
+            </button>
+        </div>
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md p-4">
+            <a href="#services" class="block py-2" data-translate="services">Services</a>
+            <a href="#faq" class="block py-2" data-translate="faq">FAQ</a>
+            <a href="#contact" class="block py-2" data-translate="contact">Contact</a>
+        </div>
+    </header>
+    
+       
+<!-- Hero Section -->
+<section class="mt-16 bg-cover bg-center h-auto md:h-96 flex items-center justify-center relative" style="background-image: url('images/hero_bg_1.jpg');">
+    <div class="bg-black bg-opacity-60 text-white text-center p-6 rounded-lg w-full md:w-3/4 lg:w-1/2 absolute top-1/2 transform -translate-y-1/2">
+        <h1 class="text-4xl font-bold" data-translate="hero_title">Maître Zouheir Belaksiria</h1>
+        <p class="text-lg" data-translate="hero_description">Notaire à Safi - À votre service</p>
+        <marquee class="mt-4 text-yellow-300" data-translate="hero_announcement">Prochainement : Ouverture d’un nouveau bureau. Restez connectés !</marquee>
+    </div>
+</section>
+
+<!-- Notaire Presentation Section -->
+<section class="container mx-auto my-16 p-8 bg-white shadow-lg rounded-lg grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+    <!-- Image du Bureau -->
+    <div class="p-4">
+        <img src="images/Bureau.jpg" alt="Bureau du notaire" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+    <!-- Informations du notaire -->
+    <div class="p-4">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4" data-translate="hero_title">Maître Zouheir Belaksiria</h2>
+        <p class="text-lg text-gray-600 mb-4" data-translate="hero_description">Notaire à Safi - À votre service</p>
+        <p class="text-lg text-gray-600 mb-4" data-translate="notaire_address">Adresse : Nouvelle Ville, Safi, Maroc</p>
+        <p class="text-lg text-gray-600 mb-4">
+            <a href="mailto:zouheir@example.com" class="text-green-600 hover:text-green-800" data-translate="notaire_email">zouheir@example.com</a>
+        </p>
+        <p class="text-lg text-gray-600 mb-4">
+            <a href="tel:+212123456789" class="text-green-600 hover:text-green-800" data-translate="notaire_phone">+212 123 456 789</a>
+        </p>
+    </div>
+</section>
+
+    
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-center text-gray-700" data-translate="services">Nos Services</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-6 bg-gray-50 rounded-lg shadow transform hover:scale-105 transition">
+                <h3 class="text-xl font-semibold" data-translate="property_law">🏡 Droit Immobilier</h3>
+                <p class="mt-2 text-gray-600" data-translate="property_law_desc">Achat/Vente, hypothèques et plus.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow transform hover:scale-105 transition">
+                <h3 class="text-xl font-semibold" data-translate="contracts">📜 Contrats</h3>
+                <p class="mt-2 text-gray-600"data-translate="contracts_desc">Rédaction et certification de contrats.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow transform hover:scale-105 transition">
+                <h3 class="text-xl font-semibold" data-translate="legal_advice">⚖️ Conseil Juridique</h3>
+                <p class="mt-2 text-gray-600" data-translate="legal_advice_desc">Accompagnement personnalisé.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto my-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-center text-gray-700" data-translate="faq">Foire Aux Questions</h2>
+        <div class="mt-6">
+            <details class="mb-4 cursor-pointer bg-gray-50 p-4 rounded-lg shadow">
+                <summary class="font-semibold text-lg" data-translate="question1">Quels services proposez-vous ?</summary>
+                <p class="mt-2" data-translate="answer1">Nous offrons des services en droit immobilier, rédaction de contrats et conseil juridique.</p>
+            </details>
+            <details class="mb-4 cursor-pointer bg-gray-50 p-4 rounded-lg shadow">
+                <summary class="font-semibold text-lg" data-translate="question2">Quels sont vos horaires d’ouverture ?</summary>
+                <p class="mt-2" data-translate="answer2">Nous sommes ouverts du lundi au vendredi de 9h à 17h.</p>
+            </details>
+            <details class="cursor-pointer bg-gray-50 p-4 rounded-lg shadow">
+                <summary class="font-semibold text-lg" data-translate="question3">Comment prendre rendez-vous ?</summary>
+                <p class="mt-2" data-translate="answer3">Vous pouvez nous contacter via le formulaire ci-dessous ou par téléphone.</p>
+            </details>
+        </div>
+    </section>
+    
+
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-center" data-translate="localisation">Localisation</h2>
+    <div class="mt-6 w-full h-64">
+        <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6745.594787742576!2d-9.237012859766322!3d32.290424765148764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac20d524395b57%3A0x41ea129f1326c1c1!2sNouvelle%20ville%2C%20Safi!5e0!3m2!1sen!2sma!4v1738941220358!5m2!1sen!2sma" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="container mx-auto my-10 p-8 bg-white shadow-md rounded-lg max-w-2xl">
+    <h2 class="text-3xl font-semibold text-center text-gray-700 mb-6" data-translate="contact">Contactez-nous</h2>
+    <form class="space-y-6 flex flex-col" action="https://formspree.io/f/xanqbbyr" method="POST">
+        <input type="text" name="name" class="w-full p-4 border rounded-lg text-lg" placeholder="Nom" data-translate="name" required>
+        <input type="email" name="email" class="w-full p-4 border rounded-lg text-lg" placeholder="Email" data-translate="email" required>
+        <textarea name="message" class="w-full p-4 border rounded-lg text-lg" rows="5" placeholder="Message" data-translate="message" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition text-lg font-semibold" data-translate="send">Envoyer</button>
+    </form>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center p-4">
+    <p data-translate="footer_rights">&copy; 2025 Maître Zouheir Belaksiria - Tous droits réservés.</p>
+    <p data-translate="footer_links">Mentions légales | Politique de confidentialité</p>
+</footer>
+
+<script>   document.addEventListener("DOMContentLoaded", async function () {
+    const languageSelector = document.getElementById("language-selector");
+    const defaultLang = localStorage.getItem("selectedLang") || "fr";
+
+    async function changeLanguage(lang) {
+        try {
+            const response = await fetch("translations.json");
+            const translations = await response.json();
+            document.documentElement.lang = lang;
+            localStorage.setItem("selectedLang", lang);
+
+            // Activer/Désactiver le mode RTL
+            if (lang === "ar") {
+                document.documentElement.dir = "rtl";
+                document.body.classList.add("rtl");
+            } else {
+                document.documentElement.dir = "ltr";
+                document.body.classList.remove("rtl");
+            }
+
+            document.querySelectorAll("[data-translate]").forEach((element) => {
+                const key = element.dataset.translate;
+                element.innerText = translations[lang][key] || key;
+            });
+        } catch (error) {
+            console.error("Erreur de chargement des traductions", error);
+        }
+    }
+
+    languageSelector.value = defaultLang;
+    await changeLanguage(defaultLang);
+
+    languageSelector.addEventListener("change", function () {
+        changeLanguage(this.value);
+    });
+});
+</script>
+        
+</body>
+</html>
